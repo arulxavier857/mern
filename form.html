@@ -6,12 +6,48 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="serverurl" method="POST">
+    <form action="serverurl" method="GET">
         <label>Name:</label>
-        <input type="text"> <br><br>
-        <label>Password:</label>
-        <input type="password"><br><br>
-        <button type="submit">Log In</button>
+        <input type="text" name="name" required><span style="color:red">*</span> <br><br>
+        <label>Password:<span style="color:red">*</span> </label>
+        <input type="password" name="password" size="50" maxlength="15" required>  <br><br>
+        <label>Email Id</label>
+        <input type="email" name="email" placeholder="sample@gmail.com" required>  <br><br>
+        <label>Date of Birth:</label>
+        <input type="date" name="dob" required>   <br><br>
+        <label>ATM PIN</label>
+        <input type="number" name="pin" min="1000" max="9999">  <br><br>
+        <label>Color Picker</label>
+        <input type="color" name="color">  <br><br>
+        <label>Gender:</label>
+        <input type="radio" name="gender" value="Male" checked> Male 
+        <input type="radio" name="gender" value="Female">Female<br><br>
+        
+        <!--Checkbox-->
+        <label>Languages Known</label>
+        <input type="checkbox" name="lang[]" value="tamil"> Tamil
+        <input type="checkbox" name="lang[]" value="hindi"> Hindi
+        <input type="checkbox" name="lang[]" value="english" checked> English
+        <input type="checkbox" name="lang[]" value="french">French
+        <br><br>
+
+        <!--Drop Down List Box-->
+        <label>State:</label>
+        <select name="state">
+            <option>Tamilnadu</option>
+            <option>Kerala</option>
+            <option>Karnataka</option>
+            <option>Andhra Pradesh</option>
+        </select>
+        <br><br>
+       
+        <button type="submit">Save Details</button>
+        <button type="reset">Clear</button>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
     </form>
 </body>
 </html>
